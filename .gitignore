@@ -4,31 +4,35 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Virtual Environment
+# Virtual Environments
 .venv/
 venv/
 
-# Database
+# Databases
 *.db
 *.sqlite3
+
+# Environment Variables
+.env
+
+# IDE
+.vscode/
+.idea/
 
 # Logs
 *.log
 
-# Environment
-.env
-
-# VS Code
-.vscode/
-
-# Pytest
+# Test Cache
 .pytest_cache/
+
+# Coverage
+.coverage
+htmlcov/
 
 # Playwright
 playwright-report/
+test-results/
 
-# macOS
+# OS
 .DS_Store
-
-# Windows
 Thumbs.db
