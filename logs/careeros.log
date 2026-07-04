@@ -362,3 +362,19 @@ FROM jobs
 WHERE jobs.id = ?
 2026-07-04 12:04:41,541 | INFO | [cached since 9.915s ago] (3,)
 2026-07-04 12:04:41,543 | INFO | ROLLBACK
+2026-07-04 12:38:57,519 | INFO | CareerOS Backend Started
+2026-07-04 12:38:57,523 | INFO | BEGIN (implicit)
+2026-07-04 12:38:57,524 | INFO | PRAGMA main.table_info("jobs")
+2026-07-04 12:38:57,524 | INFO | [raw sql] ()
+2026-07-04 12:38:57,526 | INFO | PRAGMA main.table_info("companies")
+2026-07-04 12:38:57,526 | INFO | [raw sql] ()
+2026-07-04 12:38:57,527 | INFO | COMMIT
+2026-07-04 12:38:57,527 | INFO | Database Initialized Successfully
+2026-07-04 12:39:45,922 | INFO | CareerOS Backend Started
+2026-07-04 12:39:45,923 | INFO | BEGIN (implicit)
+2026-07-04 12:39:45,924 | INFO | PRAGMA main.table_info("jobs")
+2026-07-04 12:39:45,924 | INFO | [raw sql] ()
+2026-07-04 12:39:45,924 | INFO | PRAGMA main.table_info("companies")
+2026-07-04 12:39:45,925 | INFO | [raw sql] ()
+2026-07-04 12:39:45,925 | INFO | COMMIT
+2026-07-04 12:39:45,925 | INFO | Database Initialized Successfully

@@ -1,13 +1,11 @@
 from backend.app.browser.core.browser import browser_service
 
-browser = browser_service.start()
+page = browser_service.start()
 
-page = browser.new_page()
+browser_service.goto("https://example.com")
 
-page.goto("https://www.google.com")
+print(browser_service.title())
 
-print(page.title())
+browser_service.wait(3000)
 
-page.wait_for_timeout(5000)
-
-browser_service.stop()
+browser_service.close()
