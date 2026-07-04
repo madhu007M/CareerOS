@@ -1,8 +1,3 @@
-"""
-CareerOS
-Main Entry Point
-"""
-
 from rich.console import Console
 
 from scripts.core.collector_manager import CollectorManager

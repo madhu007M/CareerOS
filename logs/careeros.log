@@ -1,0 +1,364 @@
+2026-07-03 21:51:53,507 | INFO | CareerOS Backend Started
+2026-07-03 21:52:01,626 | INFO | Home endpoint called
+2026-07-03 21:52:09,398 | INFO | Health endpoint checked
+2026-07-03 21:57:28,521 | INFO | CareerOS Backend Started
+2026-07-03 21:57:28,526 | INFO | BEGIN (implicit)
+2026-07-03 21:57:28,526 | INFO | PRAGMA main.table_info("jobs")
+2026-07-03 21:57:28,526 | INFO | [raw sql] ()
+2026-07-03 21:57:28,528 | INFO | PRAGMA temp.table_info("jobs")
+2026-07-03 21:57:28,528 | INFO | [raw sql] ()
+2026-07-03 21:57:28,529 | INFO | 
+CREATE TABLE jobs (
+	id INTEGER NOT NULL, 
+	company VARCHAR, 
+	title VARCHAR, 
+	location VARCHAR, 
+	platform VARCHAR, 
+	url VARCHAR, 
+	PRIMARY KEY (id)
+)
+
+
+2026-07-03 21:57:28,529 | INFO | [no key 0.00019s] ()
+2026-07-03 21:57:28,532 | INFO | CREATE INDEX ix_jobs_id ON jobs (id)
+2026-07-03 21:57:28,532 | INFO | [no key 0.00021s] ()
+2026-07-03 21:57:28,534 | INFO | COMMIT
+2026-07-03 21:57:28,535 | INFO | Database Initialized Successfully
+2026-07-03 22:12:48,721 | INFO | CareerOS Backend Started
+2026-07-03 22:12:48,727 | INFO | BEGIN (implicit)
+2026-07-03 22:12:48,728 | INFO | PRAGMA main.table_info("jobs")
+2026-07-03 22:12:48,728 | INFO | [raw sql] ()
+2026-07-03 22:12:48,732 | INFO | COMMIT
+2026-07-03 22:12:48,733 | INFO | Database Initialized Successfully
+2026-07-03 22:14:07,762 | INFO | Home endpoint called
+2026-07-03 22:17:05,365 | INFO | CareerOS Backend Started
+2026-07-03 22:17:05,367 | INFO | BEGIN (implicit)
+2026-07-03 22:17:05,367 | INFO | PRAGMA main.table_info("jobs")
+2026-07-03 22:17:05,368 | INFO | [raw sql] ()
+2026-07-03 22:17:05,369 | INFO | COMMIT
+2026-07-03 22:17:05,369 | INFO | Database Initialized Successfully
+2026-07-03 22:18:09,736 | INFO | BEGIN (implicit)
+2026-07-03 22:18:09,743 | INFO | INSERT INTO jobs (company, title, location, platform, url) VALUES (?, ?, ?, ?, ?)
+2026-07-03 22:18:09,746 | INFO | [generated in 0.00145s] ('Google', 'Cyber Security Intern', 'Bangalore', 'Google Careers', 'https://careers.google.com')
+2026-07-03 22:18:09,750 | INFO | COMMIT
+2026-07-03 22:18:09,758 | INFO | BEGIN (implicit)
+2026-07-03 22:18:09,766 | INFO | SELECT jobs.id, jobs.company, jobs.title, jobs.location, jobs.platform, jobs.url 
+FROM jobs 
+WHERE jobs.id = ?
+2026-07-03 22:18:09,767 | INFO | [generated in 0.00134s] (1,)
+2026-07-03 22:18:09,776 | INFO | ROLLBACK
+2026-07-03 22:18:14,149 | INFO | BEGIN (implicit)
+2026-07-03 22:18:14,151 | INFO | INSERT INTO jobs (company, title, location, platform, url) VALUES (?, ?, ?, ?, ?)
+2026-07-03 22:18:14,151 | INFO | [cached since 4.409s ago] ('Google', 'Cyber Security Intern', 'Bangalore', 'Google Careers', 'https://careers.google.com')
+2026-07-03 22:18:14,154 | INFO | COMMIT
+2026-07-03 22:18:14,159 | INFO | BEGIN (implicit)
+2026-07-03 22:18:14,161 | INFO | SELECT jobs.id, jobs.company, jobs.title, jobs.location, jobs.platform, jobs.url 
+FROM jobs 
+WHERE jobs.id = ?
+2026-07-03 22:18:14,162 | INFO | [cached since 4.397s ago] (2,)
+2026-07-03 22:18:14,168 | INFO | ROLLBACK
+2026-07-03 22:18:44,602 | INFO | BEGIN (implicit)
+2026-07-03 22:18:44,604 | INFO | SELECT jobs.id AS jobs_id, jobs.company AS jobs_company, jobs.title AS jobs_title, jobs.location AS jobs_location, jobs.platform AS jobs_platform, jobs.url AS jobs_url 
+FROM jobs
+2026-07-03 22:18:44,605 | INFO | [generated in 0.00101s] ()
+2026-07-03 22:18:44,611 | INFO | ROLLBACK
+2026-07-03 22:28:53,891 | INFO | CareerOS Backend Started
+2026-07-03 22:28:53,893 | INFO | BEGIN (implicit)
+2026-07-03 22:28:53,893 | INFO | PRAGMA main.table_info("jobs")
+2026-07-03 22:28:53,894 | INFO | [raw sql] ()
+2026-07-03 22:28:53,895 | INFO | PRAGMA main.table_info("companies")
+2026-07-03 22:28:53,896 | INFO | [raw sql] ()
+2026-07-03 22:28:53,897 | INFO | PRAGMA temp.table_info("companies")
+2026-07-03 22:28:53,897 | INFO | [raw sql] ()
+2026-07-03 22:28:53,898 | INFO | 
+CREATE TABLE companies (
+	id INTEGER NOT NULL, 
+	name VARCHAR NOT NULL, 
+	website VARCHAR, 
+	career_page VARCHAR, 
+	industry VARCHAR, 
+	location VARCHAR, 
+	logo VARCHAR, 
+	PRIMARY KEY (id), 
+	UNIQUE (name)
+)
+
+
+2026-07-03 22:28:53,899 | INFO | [no key 0.00050s] ()
+2026-07-03 22:28:53,906 | INFO | CREATE INDEX ix_companies_id ON companies (id)
+2026-07-03 22:28:53,906 | INFO | [no key 0.00052s] ()
+2026-07-03 22:28:53,909 | INFO | COMMIT
+2026-07-03 22:28:53,910 | INFO | Database Initialized Successfully
+2026-07-03 22:29:56,423 | INFO | CareerOS Backend Started
+2026-07-03 22:29:56,424 | INFO | BEGIN (implicit)
+2026-07-03 22:29:56,425 | INFO | PRAGMA main.table_info("jobs")
+2026-07-03 22:29:56,425 | INFO | [raw sql] ()
+2026-07-03 22:29:56,427 | INFO | COMMIT
+2026-07-03 22:29:56,427 | INFO | Database Initialized Successfully
+2026-07-03 22:30:19,273 | INFO | CareerOS Backend Started
+2026-07-03 22:30:19,275 | INFO | BEGIN (implicit)
+2026-07-03 22:30:19,275 | INFO | PRAGMA main.table_info("companies")
+2026-07-03 22:30:19,276 | INFO | [raw sql] ()
+2026-07-03 22:30:19,278 | INFO | PRAGMA main.table_info("jobs")
+2026-07-03 22:30:19,279 | INFO | [raw sql] ()
+2026-07-03 22:30:19,280 | INFO | COMMIT
+2026-07-03 22:30:19,280 | INFO | Database Initialized Successfully
+2026-07-03 22:30:31,401 | INFO | CareerOS Backend Started
+2026-07-03 22:30:31,402 | INFO | BEGIN (implicit)
+2026-07-03 22:30:31,403 | INFO | PRAGMA main.table_info("jobs")
+2026-07-03 22:30:31,403 | INFO | [raw sql] ()
+2026-07-03 22:30:31,404 | INFO | COMMIT
+2026-07-03 22:30:31,405 | INFO | Database Initialized Successfully
+2026-07-03 22:30:46,777 | INFO | CareerOS Backend Started
+2026-07-03 22:30:46,780 | INFO | BEGIN (implicit)
+2026-07-03 22:30:46,781 | INFO | PRAGMA main.table_info("jobs")
+2026-07-03 22:30:46,781 | INFO | [raw sql] ()
+2026-07-03 22:30:46,783 | INFO | PRAGMA main.table_info("companies")
+2026-07-03 22:30:46,784 | INFO | [raw sql] ()
+2026-07-03 22:30:46,785 | INFO | COMMIT
+2026-07-03 22:30:46,785 | INFO | Database Initialized Successfully
+2026-07-04 11:22:23,214 | INFO | CareerOS Backend Started
+2026-07-04 11:22:23,223 | INFO | BEGIN (implicit)
+2026-07-04 11:22:23,224 | INFO | PRAGMA main.table_info("jobs")
+2026-07-04 11:22:23,224 | INFO | [raw sql] ()
+2026-07-04 11:22:23,229 | INFO | PRAGMA temp.table_info("jobs")
+2026-07-04 11:22:23,230 | INFO | [raw sql] ()
+2026-07-04 11:22:23,231 | INFO | PRAGMA main.table_info("companies")
+2026-07-04 11:22:23,231 | INFO | [raw sql] ()
+2026-07-04 11:22:23,232 | INFO | PRAGMA temp.table_info("companies")
+2026-07-04 11:22:23,232 | INFO | [raw sql] ()
+2026-07-04 11:22:23,235 | INFO | 
+CREATE TABLE companies (
+	id INTEGER NOT NULL, 
+	name VARCHAR NOT NULL, 
+	website VARCHAR, 
+	career_page VARCHAR, 
+	industry VARCHAR, 
+	location VARCHAR, 
+	logo VARCHAR, 
+	PRIMARY KEY (id), 
+	UNIQUE (name)
+)
+
+
+2026-07-04 11:22:23,237 | INFO | [no key 0.00105s] ()
+2026-07-04 11:22:23,244 | INFO | CREATE INDEX ix_companies_id ON companies (id)
+2026-07-04 11:22:23,245 | INFO | [no key 0.00110s] ()
+2026-07-04 11:22:23,251 | INFO | 
+CREATE TABLE jobs (
+	id INTEGER NOT NULL, 
+	company_id INTEGER, 
+	title VARCHAR NOT NULL, 
+	location VARCHAR, 
+	platform VARCHAR, 
+	url VARCHAR, 
+	description VARCHAR, 
+	salary VARCHAR, 
+	employment_type VARCHAR, 
+	posted_date VARCHAR, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(company_id) REFERENCES companies (id)
+)
+
+
+2026-07-04 11:22:23,252 | INFO | [no key 0.00080s] ()
+2026-07-04 11:22:23,257 | INFO | CREATE INDEX ix_jobs_id ON jobs (id)
+2026-07-04 11:22:23,257 | INFO | [no key 0.00067s] ()
+2026-07-04 11:22:23,262 | INFO | COMMIT
+2026-07-04 11:22:23,264 | INFO | Database Initialized Successfully
+2026-07-04 11:25:50,125 | INFO | Health endpoint checked
+2026-07-04 11:26:52,236 | INFO | CareerOS Backend Started
+2026-07-04 11:26:52,237 | INFO | BEGIN (implicit)
+2026-07-04 11:26:52,238 | INFO | PRAGMA main.table_info("jobs")
+2026-07-04 11:26:52,239 | INFO | [raw sql] ()
+2026-07-04 11:26:52,241 | INFO | PRAGMA main.table_info("companies")
+2026-07-04 11:26:52,242 | INFO | [raw sql] ()
+2026-07-04 11:26:52,243 | INFO | COMMIT
+2026-07-04 11:26:52,244 | INFO | Database Initialized Successfully
+2026-07-04 11:27:07,400 | INFO | CareerOS Backend Started
+2026-07-04 11:27:07,401 | INFO | BEGIN (implicit)
+2026-07-04 11:27:07,402 | INFO | PRAGMA main.table_info("jobs")
+2026-07-04 11:27:07,402 | INFO | [raw sql] ()
+2026-07-04 11:27:07,404 | INFO | PRAGMA main.table_info("companies")
+2026-07-04 11:27:07,405 | INFO | [raw sql] ()
+2026-07-04 11:27:07,406 | INFO | COMMIT
+2026-07-04 11:27:07,408 | INFO | Database Initialized Successfully
+2026-07-04 11:28:45,000 | INFO | CareerOS Backend Started
+2026-07-04 11:28:45,002 | INFO | BEGIN (implicit)
+2026-07-04 11:28:45,002 | INFO | PRAGMA main.table_info("jobs")
+2026-07-04 11:28:45,003 | INFO | [raw sql] ()
+2026-07-04 11:28:45,006 | INFO | PRAGMA main.table_info("companies")
+2026-07-04 11:28:45,007 | INFO | [raw sql] ()
+2026-07-04 11:28:45,008 | INFO | COMMIT
+2026-07-04 11:28:45,009 | INFO | Database Initialized Successfully
+2026-07-04 11:29:08,175 | INFO | CareerOS Backend Started
+2026-07-04 11:29:08,178 | INFO | BEGIN (implicit)
+2026-07-04 11:29:08,179 | INFO | PRAGMA main.table_info("jobs")
+2026-07-04 11:29:08,179 | INFO | [raw sql] ()
+2026-07-04 11:29:08,183 | INFO | PRAGMA main.table_info("companies")
+2026-07-04 11:29:08,183 | INFO | [raw sql] ()
+2026-07-04 11:29:08,185 | INFO | COMMIT
+2026-07-04 11:29:08,185 | INFO | Database Initialized Successfully
+2026-07-04 11:29:39,953 | INFO | CareerOS Backend Started
+2026-07-04 11:29:39,954 | INFO | BEGIN (implicit)
+2026-07-04 11:29:39,955 | INFO | PRAGMA main.table_info("jobs")
+2026-07-04 11:29:39,955 | INFO | [raw sql] ()
+2026-07-04 11:29:39,957 | INFO | PRAGMA main.table_info("companies")
+2026-07-04 11:29:39,957 | INFO | [raw sql] ()
+2026-07-04 11:29:39,959 | INFO | COMMIT
+2026-07-04 11:29:39,959 | INFO | Database Initialized Successfully
+2026-07-04 11:30:06,676 | INFO | CareerOS Backend Started
+2026-07-04 11:30:06,678 | INFO | BEGIN (implicit)
+2026-07-04 11:30:06,679 | INFO | PRAGMA main.table_info("jobs")
+2026-07-04 11:30:06,680 | INFO | [raw sql] ()
+2026-07-04 11:30:06,682 | INFO | PRAGMA main.table_info("companies")
+2026-07-04 11:30:06,682 | INFO | [raw sql] ()
+2026-07-04 11:30:06,683 | INFO | COMMIT
+2026-07-04 11:30:06,684 | INFO | Database Initialized Successfully
+2026-07-04 11:30:19,038 | INFO | Health endpoint checked
+2026-07-04 11:36:02,111 | INFO | CareerOS Backend Started
+2026-07-04 11:36:02,113 | INFO | BEGIN (implicit)
+2026-07-04 11:36:02,113 | INFO | PRAGMA main.table_info("jobs")
+2026-07-04 11:36:02,114 | INFO | [raw sql] ()
+2026-07-04 11:36:02,115 | INFO | PRAGMA main.table_info("companies")
+2026-07-04 11:36:02,116 | INFO | [raw sql] ()
+2026-07-04 11:36:02,118 | INFO | COMMIT
+2026-07-04 11:36:02,119 | INFO | Database Initialized Successfully
+2026-07-04 11:38:16,758 | INFO | CareerOS Backend Started
+2026-07-04 11:38:16,761 | INFO | BEGIN (implicit)
+2026-07-04 11:38:16,762 | INFO | PRAGMA main.table_info("jobs")
+2026-07-04 11:38:16,762 | INFO | [raw sql] ()
+2026-07-04 11:38:16,765 | INFO | PRAGMA main.table_info("companies")
+2026-07-04 11:38:16,765 | INFO | [raw sql] ()
+2026-07-04 11:38:16,766 | INFO | COMMIT
+2026-07-04 11:38:16,767 | INFO | Database Initialized Successfully
+2026-07-04 11:38:41,319 | INFO | CareerOS Backend Started
+2026-07-04 11:38:41,321 | INFO | BEGIN (implicit)
+2026-07-04 11:38:41,322 | INFO | PRAGMA main.table_info("jobs")
+2026-07-04 11:38:41,323 | INFO | [raw sql] ()
+2026-07-04 11:38:41,325 | INFO | PRAGMA main.table_info("companies")
+2026-07-04 11:38:41,326 | INFO | [raw sql] ()
+2026-07-04 11:38:41,327 | INFO | COMMIT
+2026-07-04 11:38:41,328 | INFO | Database Initialized Successfully
+2026-07-04 11:39:07,464 | INFO | CareerOS Backend Started
+2026-07-04 11:39:07,465 | INFO | BEGIN (implicit)
+2026-07-04 11:39:07,466 | INFO | PRAGMA main.table_info("jobs")
+2026-07-04 11:39:07,467 | INFO | [raw sql] ()
+2026-07-04 11:39:07,469 | INFO | PRAGMA main.table_info("companies")
+2026-07-04 11:39:07,469 | INFO | [raw sql] ()
+2026-07-04 11:39:07,471 | INFO | COMMIT
+2026-07-04 11:39:07,471 | INFO | Database Initialized Successfully
+2026-07-04 11:40:14,742 | INFO | CareerOS Backend Started
+2026-07-04 11:40:14,744 | INFO | BEGIN (implicit)
+2026-07-04 11:40:14,745 | INFO | PRAGMA main.table_info("jobs")
+2026-07-04 11:40:14,746 | INFO | [raw sql] ()
+2026-07-04 11:40:14,747 | INFO | PRAGMA main.table_info("companies")
+2026-07-04 11:40:14,747 | INFO | [raw sql] ()
+2026-07-04 11:40:14,749 | INFO | COMMIT
+2026-07-04 11:40:14,750 | INFO | Database Initialized Successfully
+2026-07-04 11:41:07,764 | INFO | BEGIN (implicit)
+2026-07-04 11:41:07,773 | INFO | SELECT jobs.id AS jobs_id, jobs.company_id AS jobs_company_id, jobs.title AS jobs_title, jobs.location AS jobs_location, jobs.platform AS jobs_platform, jobs.url AS jobs_url, jobs.description AS jobs_description, jobs.salary AS jobs_salary, jobs.employment_type AS jobs_employment_type, jobs.posted_date AS jobs_posted_date 
+FROM jobs
+2026-07-04 11:41:07,774 | INFO | [generated in 0.00144s] ()
+2026-07-04 11:41:07,782 | INFO | ROLLBACK
+2026-07-04 11:41:28,365 | INFO | Home endpoint called
+2026-07-04 11:41:34,073 | INFO | Health endpoint checked
+2026-07-04 11:58:18,989 | INFO | CareerOS Backend Started
+2026-07-04 11:58:18,991 | INFO | BEGIN (implicit)
+2026-07-04 11:58:18,992 | INFO | PRAGMA main.table_info("jobs")
+2026-07-04 11:58:18,992 | INFO | [raw sql] ()
+2026-07-04 11:58:18,994 | INFO | PRAGMA main.table_info("companies")
+2026-07-04 11:58:18,994 | INFO | [raw sql] ()
+2026-07-04 11:58:18,996 | INFO | COMMIT
+2026-07-04 11:58:18,996 | INFO | Database Initialized Successfully
+2026-07-04 11:58:40,854 | INFO | BEGIN (implicit)
+2026-07-04 11:58:40,864 | INFO | SELECT companies.id AS companies_id, companies.name AS companies_name, companies.website AS companies_website, companies.career_page AS companies_career_page, companies.industry AS companies_industry, companies.location AS companies_location, companies.logo AS companies_logo 
+FROM companies 
+WHERE companies.name = ?
+ LIMIT ? OFFSET ?
+2026-07-04 11:58:40,866 | INFO | [generated in 0.00161s] ('Google', 1, 0)
+2026-07-04 11:58:40,875 | INFO | INSERT INTO companies (name, website, career_page, industry, location, logo) VALUES (?, ?, ?, ?, ?, ?)
+2026-07-04 11:58:40,876 | INFO | [generated in 0.00126s] ('Google', None, None, None, None, None)
+2026-07-04 11:58:40,881 | INFO | COMMIT
+2026-07-04 11:58:40,889 | INFO | BEGIN (implicit)
+2026-07-04 11:58:40,892 | INFO | SELECT companies.id, companies.name, companies.website, companies.career_page, companies.industry, companies.location, companies.logo 
+FROM companies 
+WHERE companies.id = ?
+2026-07-04 11:58:40,893 | INFO | [generated in 0.00134s] (1,)
+2026-07-04 11:58:40,902 | INFO | INSERT INTO jobs (company_id, title, location, platform, url, description, salary, employment_type, posted_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-07-04 11:58:40,903 | INFO | [generated in 0.00143s] (1, 'Cyber Security Intern', 'Bangalore', 'Google Careers', 'https://careers.google.com', '', '', '', '')
+2026-07-04 11:58:40,907 | INFO | COMMIT
+2026-07-04 11:58:40,913 | INFO | BEGIN (implicit)
+2026-07-04 11:58:40,917 | INFO | SELECT jobs.id, jobs.company_id, jobs.title, jobs.location, jobs.platform, jobs.url, jobs.description, jobs.salary, jobs.employment_type, jobs.posted_date 
+FROM jobs 
+WHERE jobs.id = ?
+2026-07-04 11:58:40,918 | INFO | [generated in 0.00125s] (1,)
+2026-07-04 11:58:40,921 | INFO | ROLLBACK
+2026-07-04 11:59:49,168 | INFO | BEGIN (implicit)
+2026-07-04 11:59:49,171 | INFO | SELECT jobs.id AS jobs_id, jobs.company_id AS jobs_company_id, jobs.title AS jobs_title, jobs.location AS jobs_location, jobs.platform AS jobs_platform, jobs.url AS jobs_url, jobs.description AS jobs_description, jobs.salary AS jobs_salary, jobs.employment_type AS jobs_employment_type, jobs.posted_date AS jobs_posted_date 
+FROM jobs
+2026-07-04 11:59:49,172 | INFO | [generated in 0.00089s] ()
+2026-07-04 11:59:49,181 | INFO | SELECT companies.id AS companies_id, companies.name AS companies_name, companies.website AS companies_website, companies.career_page AS companies_career_page, companies.industry AS companies_industry, companies.location AS companies_location, companies.logo AS companies_logo 
+FROM companies 
+WHERE companies.id = ?
+2026-07-04 11:59:49,182 | INFO | [generated in 0.00159s] (1,)
+2026-07-04 11:59:49,188 | INFO | ROLLBACK
+2026-07-04 12:04:00,368 | INFO | CareerOS Backend Started
+2026-07-04 12:04:00,370 | INFO | BEGIN (implicit)
+2026-07-04 12:04:00,371 | INFO | PRAGMA main.table_info("jobs")
+2026-07-04 12:04:00,371 | INFO | [raw sql] ()
+2026-07-04 12:04:00,372 | INFO | PRAGMA main.table_info("companies")
+2026-07-04 12:04:00,373 | INFO | [raw sql] ()
+2026-07-04 12:04:00,374 | INFO | COMMIT
+2026-07-04 12:04:00,374 | INFO | Database Initialized Successfully
+2026-07-04 12:04:18,774 | INFO | BEGIN (implicit)
+2026-07-04 12:04:18,782 | INFO | SELECT jobs.id AS jobs_id, jobs.company_id AS jobs_company_id, jobs.title AS jobs_title, jobs.location AS jobs_location, jobs.platform AS jobs_platform, jobs.url AS jobs_url, jobs.description AS jobs_description, jobs.salary AS jobs_salary, jobs.employment_type AS jobs_employment_type, jobs.posted_date AS jobs_posted_date 
+FROM jobs
+2026-07-04 12:04:18,783 | INFO | [generated in 0.00134s] ()
+2026-07-04 12:04:18,795 | INFO | SELECT companies.id AS companies_id, companies.name AS companies_name, companies.website AS companies_website, companies.career_page AS companies_career_page, companies.industry AS companies_industry, companies.location AS companies_location, companies.logo AS companies_logo 
+FROM companies 
+WHERE companies.id = ?
+2026-07-04 12:04:18,796 | INFO | [generated in 0.00132s] (1,)
+2026-07-04 12:04:18,804 | INFO | ROLLBACK
+2026-07-04 12:04:31,578 | INFO | BEGIN (implicit)
+2026-07-04 12:04:31,582 | INFO | SELECT companies.id AS companies_id, companies.name AS companies_name, companies.website AS companies_website, companies.career_page AS companies_career_page, companies.industry AS companies_industry, companies.location AS companies_location, companies.logo AS companies_logo 
+FROM companies 
+WHERE companies.name = ?
+ LIMIT ? OFFSET ?
+2026-07-04 12:04:31,582 | INFO | [generated in 0.00119s] ('string', 1, 0)
+2026-07-04 12:04:31,590 | INFO | INSERT INTO companies (name, website, career_page, industry, location, logo) VALUES (?, ?, ?, ?, ?, ?)
+2026-07-04 12:04:31,592 | INFO | [generated in 0.00180s] ('string', None, None, None, None, None)
+2026-07-04 12:04:31,596 | INFO | COMMIT
+2026-07-04 12:04:31,602 | INFO | BEGIN (implicit)
+2026-07-04 12:04:31,606 | INFO | SELECT companies.id, companies.name, companies.website, companies.career_page, companies.industry, companies.location, companies.logo 
+FROM companies 
+WHERE companies.id = ?
+2026-07-04 12:04:31,606 | INFO | [generated in 0.00099s] (2,)
+2026-07-04 12:04:31,611 | INFO | INSERT INTO jobs (company_id, title, location, platform, url, description, salary, employment_type, posted_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-07-04 12:04:31,612 | INFO | [generated in 0.00126s] (2, 'string', 'string', 'string', 'string', '', '', '', '')
+2026-07-04 12:04:31,616 | INFO | COMMIT
+2026-07-04 12:04:31,622 | INFO | BEGIN (implicit)
+2026-07-04 12:04:31,626 | INFO | SELECT jobs.id, jobs.company_id, jobs.title, jobs.location, jobs.platform, jobs.url, jobs.description, jobs.salary, jobs.employment_type, jobs.posted_date 
+FROM jobs 
+WHERE jobs.id = ?
+2026-07-04 12:04:31,626 | INFO | [generated in 0.00098s] (2,)
+2026-07-04 12:04:31,631 | INFO | SELECT companies.id AS companies_id, companies.name AS companies_name, companies.website AS companies_website, companies.career_page AS companies_career_page, companies.industry AS companies_industry, companies.location AS companies_location, companies.logo AS companies_logo 
+FROM companies 
+WHERE companies.id = ?
+2026-07-04 12:04:31,632 | INFO | [cached since 12.84s ago] (2,)
+2026-07-04 12:04:31,636 | INFO | ROLLBACK
+2026-07-04 12:04:41,524 | INFO | BEGIN (implicit)
+2026-07-04 12:04:41,525 | INFO | SELECT companies.id AS companies_id, companies.name AS companies_name, companies.website AS companies_website, companies.career_page AS companies_career_page, companies.industry AS companies_industry, companies.location AS companies_location, companies.logo AS companies_logo 
+FROM companies 
+WHERE companies.name = ?
+ LIMIT ? OFFSET ?
+2026-07-04 12:04:41,526 | INFO | [cached since 9.945s ago] ('Google', 1, 0)
+2026-07-04 12:04:41,529 | INFO | INSERT INTO jobs (company_id, title, location, platform, url, description, salary, employment_type, posted_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-07-04 12:04:41,530 | INFO | [cached since 9.918s ago] (1, 'Cyber Security Intern', 'Bangalore', 'Google Careers', 'https://careers.google.com', '', '', '', '')
+2026-07-04 12:04:41,533 | INFO | COMMIT
+2026-07-04 12:04:41,538 | INFO | BEGIN (implicit)
+2026-07-04 12:04:41,540 | INFO | SELECT jobs.id, jobs.company_id, jobs.title, jobs.location, jobs.platform, jobs.url, jobs.description, jobs.salary, jobs.employment_type, jobs.posted_date 
+FROM jobs 
+WHERE jobs.id = ?
+2026-07-04 12:04:41,541 | INFO | [cached since 9.915s ago] (3,)
+2026-07-04 12:04:41,543 | INFO | ROLLBACK
